@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+            <button id="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+        </header>
+        <button id="add-task-btn" class="btn">➕ Add Task</button>
+        <input type="text" id="search" placeholder="Search tasks..." class="search-input">
+        <div id="task-list" class="task-list"></div>
+        <footer>
+            <p>Total Tasks: <span id="total-tasks-count">0</span></p>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" title="Close Modal">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-input">Task Name</label>
+                    <input type="text" id="task-input" placeholder="Enter task..." required>
+                </div>
+                <div class="form-group">
+                    <label for="due-date-input">Due Date</label>
+                    <input type="date" id="due-date-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="mood-select">Mood</label>
+                    <select id="mood-select">
+                        <option value="happy">Happy</option>
+                        <option value="motivated">Motivated</option>
+                        <option value="tired">Tired</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <div class="priority-options">
+                        <label><input type="radio" name="priority" value="High" required> High</label>
+                        <label><input type="radio" name="priority" value="Medium"> Medium</label>
+                        <label><input type="radio" name="priority" value="Low"> Low</label>
+                    </div>
+                </div>
+                <button type="submit" id="add-task" class="btn">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
